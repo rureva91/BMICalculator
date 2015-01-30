@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="6"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bmicalculator.MainActivity" >
+
+    <android.support.v7.widget.Space
+        android:id="@+id/Space1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="5"
+        android:layout_gravity="fill_vertical"
+        android:layout_row="11" />
+
+    <TextView
+        android:id="@+id/HeightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/heightEditText"
+        android:layout_alignRight="@+id/WeightTextView"
+        android:text="@string/height"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/WeightTextView"
+        android:layout_alignLeft="@+id/bmiCalcBtn"
+        android:ems="10"
+        android:inputType="number|numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weightEditText"
+        android:layout_below="@+id/weightEditText"
+        android:ems="10"
+        android:inputType="number|numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditText"
+        android:layout_centerHorizontal="true" >
+
+        <RadioButton
+            android:id="@+id/engRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/english" />
+
+        <RadioButton
+            android:id="@+id/MetricRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metric" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/WeightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:layout_toLeftOf="@+id/radioGroup1"
+        android:text="@string/weight"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:text="Your BMI is :"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bmiCalcBtn"
+        android:layout_below="@+id/bmiCalcBtn"
+        android:layout_marginTop="26dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:width="150dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:width="140dp" />
+
+    <Button
+        android:id="@+id/bmiCalcBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:layout_centerVertical="true"
+        android:text="@string/bmiCalcBtn" />
+
+</RelativeLayout>
